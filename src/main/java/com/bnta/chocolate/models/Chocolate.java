@@ -12,11 +12,11 @@ public class Chocolate {
 
     @Column
     private String name;
-    @Column
+    @Column(name = "cocoa_percentage")
     private int cocoaPercentage;
 
     @ManyToOne
-    @JoinColumn(name = "estate_id")
+    @JoinColumn(name = "estate_id", nullable = false)
     private Estate estate;
 
     public Chocolate(String name, int cocoaPercentage, Estate estate) {
